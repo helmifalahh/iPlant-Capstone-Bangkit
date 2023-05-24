@@ -1,0 +1,75 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">iPlant</string>
+
+    <!--On Boarding-->
+    <string name="start">Get Started</string>
+
+    <!--Login Activity-->
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="email_cannot_empty">Email cannot be empty</string>
+    <string name="valid_email">Your Email is not valid!</string>
+    <string name="email_hint">Enter Your Email</string>
+    <string name="password_hint">Enter Your Password</string>
+    <string name="move_to_register">I don\'t have an account, </string>
+    <string name="signup">Sign Up</string>
+    <string name="password_minimum">Password must consist 8 characters</string>
+
+    <!--Register Activity-->
+    <string name="name">Name</string>
+    <string name="name_hint">Enter Your Name</string>
+    <string name="move_to_login">I already have an account, </string>
+    <string name="login">Login</string>
+
+    <!--Dashboard Fragment -->
+    <string name="user">User</string>
+    <string name="hello">Hello, </string>
+    <string name="desc_hello">Good to see you again!</string>
+
+    <!--Bottom Navigation -->
+    <string name="home">Home</string>
+    <string name="article">Article</string>
+    <string name="profile">Profile</string>
+
+    <!--Article Fragment -->
+    <string name="image">Picture</string>
+    <string name="placeholder_title">Title</string>
+    <string name="placeholder_desc">This is Description of Article</string>
+
+    <!--Dashboard Fragment -->
+    <string name="text_photo">Let\'s Try This!</string>
+    <string name="text_article">Watch This Article</string>
+    <string name="see_article">See All Article</string>
+    <string name="camera">Take Picture</string>
+    <string name="take_picture">Take \nPicture</string>
+    <string name="diagnostic">Diagnostic \nProcess</string>
+    <string name="see_result">See the \nResult</string>
+
+    <!--Profile Fragment -->
+    <string name="email_display">user@iplant.com</string>
+    <string name="setting">Settings</string>
+    <string name="enable_darkmode">Enable Dark Theme</string>
+    <string name="desc_enable_darkmode">Toggle to adjust dark or light mode</string>
+    <string name="change_language">Change Language</string>
+    <string name="desc_change_language">CLick Here to Change Language</string>
+
+    <!--Camera Activity -->
+    <string name="start_capture_now">Start Capture Now</string>
+
+    <!--Result Activity -->
+    <string name="result">Result</string>
+
+    <!--Info Dialog Camera -->
+    <string name="info">How to Use</string>
+    <string name="one">1. </string>
+    <string name="two">2. </string>
+    <string name="three">3. </string>
+    <string name="four">4. </string>
+    <string name="warning">Warning : </string>
+    <string name="info_one">Before taking a photo, make sure the light is bright</string>
+    <string name="info_two">Make sure the object to be scanned right inside the camera</string>
+    <string name="info_three">Wait until the process of diagnostic finish</string>
+    <string name="info_four">See the result of image that you capture and implement the tips that display on your screen</string>
+    <string name="info_warning">If you have problem with your back camera, try with your front camera</string>
+    <string name="close">Close</string>
+</resources>

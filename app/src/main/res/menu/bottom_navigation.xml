@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home"
+        app:cnb_iconColor="@color/green_3"
+        app:cnb_backgroundColor="@color/green_1"/>
+    <item
+        android:id="@+id/none1"
+        android:title=""
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/none2"
+        android:title=""
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/shop"
+        android:title="Shop"
+        android:icon="@drawable/ic_shop"
+        app:cnb_iconColor="@color/green_3"
+        app:cnb_backgroundColor="@color/green_1"/>
+</menu>

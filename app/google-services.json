@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "940031402271",
+    "project_id": "iplant-login",
+    "storage_bucket": "iplant-login.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940031402271:android:ff05215a049d2c530e502a",
+        "android_client_info": {
+          "package_name": "com.acer.iplant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940031402271-hqrmgt6iqhip57bi02aah92fc07mq5u1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.acer.iplant",
+            "certificate_hash": "491d74f2aa67eaf9ccb7c2c15bae68edeb3e77db"
+          }
+        },
+        {
+          "client_id": "940031402271-57d4gq3iuhvkcfpvv4m5f7dh78i8fgak.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMyHj0_Hi1DNeZGekcHlY-03nWfxVRG7s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940031402271-57d4gq3iuhvkcfpvv4m5f7dh78i8fgak.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

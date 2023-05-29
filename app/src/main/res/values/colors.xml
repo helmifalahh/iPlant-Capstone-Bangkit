@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--    Pallet Warna-->
+    <color name="green_1">#63DCA6</color>
+    <color name="green_2">#367964</color>
+    <color name="green_3">#134D3B</color>
+    <color name="white_bone">#F7F6F0</color>
+
+    <color name="green_disable">#ACC8A7</color>
+    <color name="transparent_green">#4FACECA1</color>
+    <color name="gray">#9A9A9A</color>
+    <color name="gray2">#F4F4F4</color>
+    <color name="black_transparent">#51000000</color>
+</resources>

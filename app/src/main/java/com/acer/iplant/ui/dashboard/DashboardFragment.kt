@@ -1,28 +1,26 @@
-package com.acer.iplant.ui
+package com.acer.iplant.ui.dashboard
 
 import android.annotation.SuppressLint
+import android.content.ContentValues
 import android.content.Intent
-import android.graphics.BitmapFactory
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.TextView
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.fragment.app.FragmentManager
-import androidx.fragment.app.FragmentTransaction
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.acer.iplant.R
 import com.acer.iplant.databinding.FragmentDashboardBinding
-import com.acer.iplant.helper.rotateBitmap
-import com.acer.iplant.ui.CameraActivity.Companion.CAMERA_X_RESULT
+import com.acer.iplant.ui.article.ArticleActivity
+import com.acer.iplant.ui.profile.ProfileActivity
 import com.bumptech.glide.Glide
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.google.firebase.auth.FirebaseAuth
-import java.io.File
+import com.google.firebase.database.*
 
 class DashboardFragment : Fragment() {
 
@@ -55,10 +53,8 @@ class DashboardFragment : Fragment() {
                 onClick(view)
             }
             photoUserIplant.setOnClickListener{
-                val profileFragment = ProfileFragment()
-                val transaction : FragmentTransaction = requireFragmentManager().beginTransaction()
-                transaction.replace(R.id.frame_dashboard, profileFragment)
-                transaction.commit()
+                val intent = Intent(requireActivity(), ProfileActivity::class.java)
+                startActivity(intent)
             }
         }
 
@@ -76,9 +72,7 @@ class DashboardFragment : Fragment() {
 
     @SuppressLint("UseRequireInsteadOfGet")
     fun onClick(view: View) {
-        val articleFragment = ArticleFragment()
-        val transaction : FragmentTransaction = fragmentManager!!.beginTransaction()
-        transaction.replace(R.id.frame_dashboard, articleFragment)
-        transaction.commit()
+        val intent = Intent(requireActivity(), ArticleActivity::class.java)
+        startActivity(intent)
     }
 }

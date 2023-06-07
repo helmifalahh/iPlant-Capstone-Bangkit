@@ -5,11 +5,11 @@
     <string name="title_page_1">Identify Disease on\nthe go, Anytime</string>
     <string name="desc_page_1">Growth in Every Pixels : Revolutionizing Disease\nDetection for Smarter Conservation</string>
     <string name="title_page_2">Your Pocket-Sized\nPlant Encyclopedia</string>
-    <string name="desc_page_2">Growth in Every Pixels : Revolutionizing Disease\nDetection for Smarter Conservation</string>
+    <string name="desc_page_2">Empower Your Plant Journey: The Handy\nPocket-Sized Encyclopedia</string>
     <string name="title_page_3">Window Into Plant\nWonder</string>
-    <string name="desc_page_3">Growth in Every Pixels : Revolutionizing Disease\nDetection for Smarter Conservation</string>
+    <string name="desc_page_3">Unlocking Plant Magic: Peering\nthrough the Window of Wonder.</string>
     <string name="title_page_4">Nurturing Nature\'s\nSecrets</string>
-    <string name="desc_page_4">Growth in Every Pixels : Revolutionizing Disease\nDetection for Smarter Conservation</string>
+    <string name="desc_page_4">Nurturing Change: Reshaping Disease\nDetection for Smarter Conservation</string>
 
     <!--Login Activity-->
     <string name="email">Email Address</string>
@@ -94,6 +94,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_cart">Cart</string>
     <string name="back">Back</string>
+    <string name="shop">Shop</string>
     <string name="add_to_cart">Add to My Cart Now : Rp %d</string>
     <string name="total_order">Your order total is Rp %d</string>
     <string name="lorem_ipsum">%s</string>

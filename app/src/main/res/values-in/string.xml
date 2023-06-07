@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">iPlant</string>
+
+    <!--On Boarding-->
+    <string name="title_page_1">Identifikasi Penyakit saat\nBepergian, Kapan Saja</string>
+    <string name="desc_page_1">Pertumbuhan dalam Setiap Piksel: Merevolusi Deteksi Penyakit\nUntuk Konservasi yang Lebih Cerdas</string>
+    <string name="title_page_2">Ensiklopedia Tanaman\nSeukuran Saku Anda</string>
+    <string name="desc_page_2">Berdayakan Perjalanan Tumbuhan Anda: Ensiklopedia\nBerukuran Saku yang Praktis</string>
+    <string name="title_page_3">Jendela Keajaiban\nTanaman</string>
+    <string name="desc_page_3">Membuka Keajaiban Tumbuhan: Mengintip \nmelalui Jendela Keajaiban.</string>
+    <string name="title_page_4">Memelihara Rahasia\nAlam</string>
+    <string name="desc_page_4">Perubahan Pemeliharaan: Membentuk kembali Deteksi\nPenyakit untuk konservasi yang lebih cerdas</string>
+
+    <!--Login Activity-->
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="lets_login">Saya pandu anda masuk.</string>
+    <string name="welcome">Selamat Datang.</string>
+    <string name="welcome_desc">Masuk untuk menjelajahi\naplikasi kami.</string>
+    <string name="welcome_desc2">Lanjutkan perjalanan deteksi penyakit Anda\ndengan masuk ke akun Anda</string>
+    <string name="email_cannot_empty">Email cannot be empty</string>
+    <string name="valid_email">Your Email is not valid!</string>
+    <string name="email_hint">Enter Your Email</string>
+    <string name="password_hint">Enter Your Password</string>
+    <string name="move_to_register">I don\'t have an account, </string>
+    <string name="signup">Sign Up</string>
+    <string name="password_minimum">Password must consist 8 characters</string>
+
+    <!--Register Activity-->
+    <string name="name">Name</string>
+    <string name="name_hint">Enter Your Name</string>
+    <string name="move_to_login">I already have an account, </string>
+    <string name="login">Masuk dengan Google</string>
+
+    <!--Dashboard Fragment -->
+    <string name="user">Pengguna</string>
+    <string name="hello">Halo, </string>
+    <string name="desc_hello">👋 Senang bertemu kembali denganmu!</string>
+    <string name="desc_hello2">Jaga Tanamanmu</string>
+
+    <!--Bottom Navigation -->
+    <string name="home">Beranda</string>
+    <string name="article">Artikel</string>
+    <string name="profile">Profil</string>
+
+    <!--Article Fragment -->
+    <string name="image">Gambar</string>
+    <string name="placeholder_title">Judul</string>
+    <string name="placeholder_desc">Deskripsi dari artikel</string>
+
+    <!--Dashboard Fragment -->
+    <string name="text_photo">Sembuhkan Tanamanmu Sekarang!</string>
+    <string name="text_article">Baca Artikel ini</string>
+    <string name="see_article">Lihat semua Artikel</string>
+    <string name="camera">Ambil Gambar</string>
+    <string name="take_picture">Ambil \nGambar</string>
+    <string name="diagnostic">Diagnostic \nProcess</string>
+    <string name="see_result">See the \nResult</string>
+
+    <!--Profile Fragment -->
+    <string name="email_display">user@iplant.com</string>
+    <string name="setting">Pengaturan</string>
+    <string name="enable_darkmode">Aktifkan Mode Malam</string>
+    <string name="desc_enable_darkmode">Sesuaikan mode malam atau terang</string>
+    <string name="change_language">Ganti Bahasa</string>
+    <string name="desc_change_language">Klik disini untuk mengganti bahasa</string>
+    <string name="logout">Keluar Sekarang</string>
+
+    <!--Camera Activity -->
+    <string name="start_capture_now">Mulai Ambil Sekarang</string>
+
+    <!--Result Activity -->
+    <string name="result">Hasil</string>
+
+    <!--Info Dialog Camera -->
+    <string name="info">Cara Penggunaan</string>
+    <string name="one">1. </string>
+    <string name="two">2. </string>
+    <string name="three">3. </string>
+    <string name="four">4. </string>
+    <string name="warning">Peringatan : </string>
+    <string name="info_one">Sebelum mengambil foto, pastikan cahayanya terang</string>
+    <string name="info_two">Pastikan objek yang akan dipindai tepat berada di dalam kamera</string>
+    <string name="info_three">Tunggu hingga proses diagnostik selesai</string>
+    <string name="info_four">Lihat hasil gambar yang Anda ambil dan terapkan tips yang ditampilkan di layar Anda</string>
+    <string name="info_warning">Jika Anda memiliki masalah dengan kamera belakang Anda, coba dengan kamera depan Anda</string>
+    <string name="close">Tutup</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_shop">ShopActivity</string>
+
+    <!--Shop Activity -->
+    <string name="required_price">Rp %d</string>
+    <string name="menu_home">Beranda</string>
+    <string name="menu_cart">Keranjang</string>
+    <string name="back">Kembali</string>
+    <string name="shop">Belanja</string>
+    <string name="add_to_cart">Tambah ke Keranjang : Rp %d</string>
+    <string name="total_order">Total order anda adalah Rp %d</string>
+    <string name="lorem_ipsum">%s</string>
+</resources>

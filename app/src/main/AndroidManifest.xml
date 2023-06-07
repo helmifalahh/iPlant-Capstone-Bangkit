@@ -19,6 +19,13 @@
         android:theme="@style/Theme.IPlant"
         tools:targetApi="31">
         <activity
+            android:name=".ui.article.ArticleActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.DashboardActivity"/>
+        <activity
+            android:name=".ui.profile.ProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.shopcompose.ShopActivity"
             android:exported="false"
             android:label="@string/title_activity_shop"

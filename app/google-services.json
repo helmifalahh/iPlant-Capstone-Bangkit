@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "940031402271",
+    "firebase_url": "https://iplant-login-default-rtdb.firebaseio.com",
     "project_id": "iplant-login",
     "storage_bucket": "iplant-login.appspot.com"
   },

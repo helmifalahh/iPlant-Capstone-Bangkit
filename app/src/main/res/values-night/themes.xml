@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.IPlant" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">@color/green_1</item>
+        <item name="colorPrimaryVariant">@color/green_2</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
@@ -12,5 +12,10 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/poppins_regular</item>
+    </style>
+
+    <style name="BottomNavbarText">
+        <item name="fontFamily">@font/poppins_semibold</item>
     </style>
 </resources>

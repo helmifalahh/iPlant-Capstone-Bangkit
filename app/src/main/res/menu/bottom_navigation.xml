@@ -3,10 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/home"
-        android:title="Home"
-        android:icon="@drawable/ic_home"
-        app:cnb_iconColor="@color/green_3"
-        app:cnb_backgroundColor="@color/green_1"/>
+        android:title="@string/home"
+        android:enabled="true"
+        android:icon="@drawable/ic_homenew" />
     <item
         android:id="@+id/none1"
         android:title=""
@@ -17,8 +16,7 @@
         app:showAsAction="ifRoom"/>
     <item
         android:id="@+id/shop"
-        android:title="Shop"
-        android:icon="@drawable/ic_shop"
-        app:cnb_iconColor="@color/green_3"
-        app:cnb_backgroundColor="@color/green_1"/>
+        android:title="@string/shop"
+        android:enabled="true"
+        android:icon="@drawable/ic_shopnew" />
 </menu>

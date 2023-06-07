@@ -5,29 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/coordinator_dash"
-    android:background="@color/white_bone"
+    android:background="?attr/colorOnPrimary"
     tools:context=".ui.DashboardActivity">
 
     <FrameLayout
         android:id="@+id/frame_dashboard"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="70dp"/>
+        android:layout_marginBottom="20dp"/>
 
-<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:id="@+id/bottom_navigation"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:menu="@menu/bottom_navigation" />-->
     <com.google.android.material.bottomappbar.BottomAppBar
         android:id="@+id/bottomAppBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         app:fabCradleMargin="12dp"
-        app:fabCradleRoundedCornerRadius="90dp"
-        app:fabCradleVerticalOffset="10dp"
+        app:fabCradleRoundedCornerRadius="100dp"
+        app:fabCradleVerticalOffset="0dp"
         tools:ignore="BottomAppBar">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -38,7 +32,11 @@
             android:background="@drawable/bg_transparent"
             android:paddingTop="10dp"
             android:paddingBottom="8dp"
-            app:menu="@menu/bottom_navigation"/>
+            app:itemIconTint="@drawable/navbar_color"
+            app:itemTextColor="@color/green_2"
+            app:menu="@menu/bottom_navigation"
+            app:itemTextAppearanceActive="@style/BottomNavbarText"
+            app:itemTextAppearanceInactive="@style/BottomNavbarText"/>
     </com.google.android.material.bottomappbar.BottomAppBar>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -47,9 +45,10 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_scan"
         app:fabCustomSize="70dp"
-        app:maxImageSize="30dp"
-        app:tint="@color/black"
-        app:backgroundTint="@color/green_1"
+        style="?attr/floatingActionButtonLargePrimaryStyle"
+        app:maxImageSize="38dp"
+        app:tint="@color/gray2"
+        app:backgroundTint="@color/green_2"
         app:layout_anchor="@id/bottomAppBar"
         android:scaleType="center"/>
 

@@ -3,8 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/colorOnPrimary"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.ProfileFragment">
+    tools:context=".ui.profile.ProfileActivity">
 
     <RelativeLayout
         android:id="@+id/relativeLayout2"
@@ -26,13 +27,15 @@
 
     <TextView
         android:id="@+id/user"
-        android:layout_width="wrap_content"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/poppins_bold"
         android:text="@string/user"
-        android:textColor="@color/black"
         android:textSize="24sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/photo_user_iplant" />
@@ -42,7 +45,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/email_display"
-        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/user" />
@@ -54,7 +56,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="16dp"
         android:text="@string/setting"
-        android:textColor="@color/black"
+        android:textColor="@color/gray"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
@@ -65,7 +67,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:background="@color/black"
+        android:background="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -121,12 +123,14 @@
                         android:text="@string/desc_enable_darkmode"/>
                 </LinearLayout>
 
-                <com.mahfa.dnswitch.DayNightSwitch
+                <Switch
                     android:id="@+id/switch_dark"
                     android:layout_width="45dp"
                     android:layout_height="25dp"
+                    android:layout_gravity="center"
                     android:layout_marginStart="50dp"
-                    android:layout_gravity="center"/>
+                    tools:ignore="UseSwitchCompatOrMaterialXml" />
+
             </LinearLayout>
 
         </LinearLayout>

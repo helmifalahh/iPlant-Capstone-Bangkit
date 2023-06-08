@@ -64,13 +64,17 @@
     <string name="desc_enable_darkmode">Toggle to adjust dark or light mode</string>
     <string name="change_language">Change Language</string>
     <string name="desc_change_language">CLick Here to Change Language</string>
+    <string name="alert_logout">Alert</string>
     <string name="logout">Logout Now</string>
+    <string name="not_logout">No</string>
+    <string name="dialog_logout">Are you sure want to Logout?</string>
 
     <!--Camera Activity -->
     <string name="start_capture_now">Start Capture Now</string>
 
     <!--Result Activity -->
     <string name="result">Result</string>
+    <string name="predict">Predict</string>
 
     <!--Info Dialog Camera -->
     <string name="info">How to Use</string>
@@ -98,4 +102,10 @@
     <string name="add_to_cart">Add to My Cart Now : Rp %d</string>
     <string name="total_order">Your order total is Rp %d</string>
     <string name="lorem_ipsum">%s</string>
+
+    <!--Media Activity-->
+    <string name="choose_camera">Choose Your Camera</string>
+    <string name="desc_choose_camera">You can choose camera default on your phone\nor use iPlant camera</string>
+    <string name="default_camera">Use Default\nCamera</string>
+    <string name="iplant_camera">Use iPlant\nCamera</string>
 </resources>

@@ -31,11 +31,20 @@ import java.io.File
 import java.io.FileOutputStream
 import java.io.InputStream
 import java.io.OutputStream
+import java.util.concurrent.ExecutorService
+import java.util.concurrent.Executors
 
 class CameraActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityCameraBinding
+
     private var cameraSelector: CameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
+
     private var imageCapture: ImageCapture? = null
+
+    private lateinit var cameraExecutor: ExecutorService
+
+    private var photoTaken = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,20 +52,33 @@ class CameraActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         infoDialog()
+        setupButton()
 
-        if (!allPermissionsGranted()) {
-            ActivityCompat.requestPermissions(
-                this,
-                REQUIRED_PERMISSIONS,
-                REQUEST_CODE_PERMISSIONS
-            )
+        cameraExecutor = Executors.newSingleThreadExecutor()
+
+//        if (!allPermissionsGranted()) {
+//            ActivityCompat.requestPermissions(
+//                this,
+//                REQUIRED_PERMISSIONS,
+//                REQUEST_CODE_PERMISSIONS
+//            )
+//        }
+    }
+
+    private fun setupButton(){
+        binding.btnCapture.setOnClickListener {
+            if (photoTaken){
+                Toast.makeText(this, getString(R.string.hello_blank_fragment), Toast.LENGTH_SHORT).show()
+            } else {
+                photoTaken = true
+                takePhoto()
+            }
         }
-
         binding.btnGallery.setOnClickListener { startGallery() }
-        binding.btnCapture.setOnClickListener { takePhoto() }
         binding.switchCamera.setOnClickListener {
-            cameraSelector = if (cameraSelector.equals(CameraSelector.DEFAULT_BACK_CAMERA)) CameraSelector.DEFAULT_FRONT_CAMERA
-            else CameraSelector.DEFAULT_BACK_CAMERA
+            cameraSelector =
+                if (cameraSelector == CameraSelector.DEFAULT_BACK_CAMERA) CameraSelector.DEFAULT_FRONT_CAMERA
+                else CameraSelector.DEFAULT_BACK_CAMERA
             startCamera()
         }
     }
@@ -185,6 +207,11 @@ class CameraActivity : AppCompatActivity() {
                 ).show()
             }
         }, ContextCompat.getMainExecutor(this))
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        cameraExecutor.shutdown()
     }
 
     override fun onRequestPermissionsResult(

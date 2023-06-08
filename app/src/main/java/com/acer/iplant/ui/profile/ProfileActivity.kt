@@ -4,20 +4,27 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.compose.ui.res.stringResource
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.lifecycle.ViewModelProvider
+import com.acer.iplant.R
 import com.acer.iplant.databinding.ActivityProfileBinding
 import com.acer.iplant.helper.SaveDark
+import com.acer.iplant.ui.LoginActivity
 import com.acer.iplant.ui.StartActivity
 import com.bumptech.glide.Glide
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 private val Context.settingDataStore by preferencesDataStore("settings")
 class ProfileActivity : AppCompatActivity() {
     private lateinit var binding: ActivityProfileBinding
     private lateinit var mAuth : FirebaseAuth
+    private lateinit var builder: AlertDialog.Builder
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -26,10 +33,25 @@ class ProfileActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
+        builder = AlertDialog.Builder(this)
+
         darkMode()
         displayUser()
-        logout()
         changeLanguage()
+        checkAuth()
+
+        binding.btnLogout.setOnClickListener{
+            builder.setTitle(R.string.alert_logout)
+                .setMessage(R.string.dialog_logout)
+                .setCancelable(true)
+                .setPositiveButton(R.string.logout){ dialogInterface,it ->
+                    logout()
+                }
+                .setNegativeButton(R.string.not_logout){ dialogInterface,it ->
+                    dialogInterface.cancel()
+                }
+                .show()
+        }
 
         supportActionBar?.hide()
     }
@@ -45,11 +67,20 @@ class ProfileActivity : AppCompatActivity() {
     }
 
     private fun logout(){
-        binding.btnLogout.setOnClickListener{
-            FirebaseAuth.getInstance().signOut()
-            val intent = Intent(this, StartActivity::class.java)
-            startActivity(intent)
+        mAuth.signOut()
+        startActivity(Intent(this, LoginActivity::class.java))
+        finish()
+        finishAffinity()
+    }
+
+    private fun checkAuth(){
+        mAuth = Firebase.auth
+        var firebaseUser = mAuth.currentUser
+
+        if (firebaseUser == null){
+            startActivity(Intent(this, LoginActivity::class.java))
             finish()
+            return
         }
     }
 

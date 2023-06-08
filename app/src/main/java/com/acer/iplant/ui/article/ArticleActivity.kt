@@ -8,11 +8,17 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.acer.iplant.R
 import com.acer.iplant.databinding.ActivityArticleBinding
+import com.acer.iplant.remote.ApiConfig
+import com.acer.iplant.remote.ApiService
 import com.google.firebase.database.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class ArticleActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityArticleBinding
+    private val list = ArrayList<ArticleResponseItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,7 +27,30 @@ class ArticleActivity : AppCompatActivity() {
 
         supportActionBar?.setTitle("Article")
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        showArticle()
+
+        binding.apply {
+            rvArticle.setHasFixedSize(true)
+            rvArticle.layoutManager = LinearLayoutManager(this@ArticleActivity)
+        }
     }
 
+    private fun showArticle(){
+        ApiConfig.apiInstance.getArticle().enqueue(object: Callback<ArrayList<ArticleResponseItem>>{
+            override fun onResponse(
+                call: Call<ArrayList<ArticleResponseItem>>,
+                response: Response<ArrayList<ArticleResponseItem>>
+            ) {
+                response.body()?.let { list.addAll(it) }
+                val adapter = ArticleAdapter(list)
+                binding.rvArticle.adapter = adapter
+            }
 
+            override fun onFailure(call: Call<ArrayList<ArticleResponseItem>>, t: Throwable) {
+
+            }
+
+        })
+    }
 }

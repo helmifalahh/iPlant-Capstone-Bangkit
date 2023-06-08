@@ -14,6 +14,9 @@ import com.acer.iplant.helper.SaveDark
 import com.acer.iplant.ui.dashboard.DashboardFragment
 import com.acer.iplant.ui.profile.ProfileViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 private val Context.settingDataStore by preferencesDataStore("settings")
 class DashboardActivity : AppCompatActivity() {
@@ -24,6 +27,7 @@ class DashboardActivity : AppCompatActivity() {
     val shopFragment = ShopFragment()
 
     private lateinit var bottomNavigation: BottomNavigationView
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,7 +37,7 @@ class DashboardActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         binding.fabCamera.setOnClickListener {
-            val intent = Intent(this, CameraActivity::class.java)
+            val intent = Intent(this, MediaActivity::class.java)
             startActivity(intent)
         }
 

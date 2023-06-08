@@ -66,12 +66,16 @@
     <string name="change_language">Ganti Bahasa</string>
     <string name="desc_change_language">Klik disini untuk mengganti bahasa</string>
     <string name="logout">Keluar Sekarang</string>
+    <string name="alert_logout">Peringatan</string>
+    <string name="not_logout">Tidak</string>
+    <string name="dialog_logout">Apakah anda yakin ingin keluar dari aplikasi?</string>
 
     <!--Camera Activity -->
     <string name="start_capture_now">Mulai Ambil Sekarang</string>
 
     <!--Result Activity -->
     <string name="result">Hasil</string>
+    <string name="predict">Prediksi</string>
 
     <!--Info Dialog Camera -->
     <string name="info">Cara Penggunaan</string>
@@ -99,4 +103,10 @@
     <string name="add_to_cart">Tambah ke Keranjang : Rp %d</string>
     <string name="total_order">Total order anda adalah Rp %d</string>
     <string name="lorem_ipsum">%s</string>
+
+    <!--Media Activity-->
+    <string name="choose_camera">Pilih Kameramu</string>
+    <string name="desc_choose_camera">Kamu bisa memilih menggunakan kamera bawaan dari\nperangkat kamu atau menggunakan kamera iPlant</string>
+    <string name="default_camera">Menggunakan Kamera Perangkat</string>
+    <string name="iplant_camera">Menggunakan Kamera iPlant</string>
 </resources>

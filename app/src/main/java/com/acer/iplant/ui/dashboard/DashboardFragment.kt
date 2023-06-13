@@ -22,6 +22,7 @@ import com.bumptech.glide.Glide
 import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
+import com.facebook.shimmer.ShimmerFrameLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import retrofit2.Call
@@ -34,6 +35,7 @@ class DashboardFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var mAuth : FirebaseAuth
     private val list = ArrayList<ArticleResponseItem>()
+    private lateinit var shimmerView : ShimmerFrameLayout
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,10 +48,10 @@ class DashboardFragment : Fragment() {
 
         val imageSlider = view.findViewById<ImageSlider>(R.id.image_slider)
         val imageList = ArrayList<SlideModel>()
-        imageList.add(SlideModel("https://bit.ly/2YoJ77H"))
-        imageList.add(SlideModel("https://bit.ly/2BteuF2"))
-        imageList.add(SlideModel(R.drawable.dash1))
-        imageList.add(SlideModel(R.drawable.dash2))
+        imageList.add(SlideModel(R.drawable.carousel_iplant_1))
+        imageList.add(SlideModel(R.drawable.carousel_iplant_2))
+        imageList.add(SlideModel(R.drawable.carousel_iplant_3))
+        imageList.add(SlideModel(R.drawable.carousel_iplant_4))
 
         imageSlider.setImageList(imageList, ScaleTypes.CENTER_CROP)
 
@@ -67,6 +69,8 @@ class DashboardFragment : Fragment() {
             rvArticle.setHasFixedSize(true)
             rvArticle.layoutManager = LinearLayoutManager(requireContext())
         }
+
+        shimmerView = binding.shimmerArticle
 
         return view
     }
@@ -93,6 +97,8 @@ class DashboardFragment : Fragment() {
                 call: Call<ArrayList<ArticleResponseItem>>,
                 response: Response<ArrayList<ArticleResponseItem>>
             ) {
+                shimmerView.stopShimmer()
+                shimmerView.visibility = View.GONE
                 response.body()?.let { list.addAll(it) }
                 val adapter = ArticleDashboardAdapter(list)
                 binding.rvArticle.adapter = adapter

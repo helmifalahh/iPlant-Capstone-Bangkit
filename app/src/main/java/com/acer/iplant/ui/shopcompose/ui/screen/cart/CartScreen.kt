@@ -58,7 +58,7 @@ fun CartContent(
     modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = modifier.fillMaxSize()
+        modifier = modifier.fillMaxWidth()
     ) {
         TopAppBar(backgroundColor = MaterialTheme.colors.surface) {
             Text(

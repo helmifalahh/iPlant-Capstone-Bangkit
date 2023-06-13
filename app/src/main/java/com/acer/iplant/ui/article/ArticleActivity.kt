@@ -4,12 +4,14 @@ import android.content.ContentValues.TAG
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.acer.iplant.R
 import com.acer.iplant.databinding.ActivityArticleBinding
 import com.acer.iplant.remote.ApiConfig
 import com.acer.iplant.remote.ApiService
+import com.facebook.shimmer.ShimmerFrameLayout
 import com.google.firebase.database.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -20,6 +22,8 @@ class ArticleActivity : AppCompatActivity() {
     private lateinit var binding: ActivityArticleBinding
     private val list = ArrayList<ArticleResponseItem>()
 
+    private lateinit var shimmerView : ShimmerFrameLayout
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityArticleBinding.inflate(layoutInflater)
@@ -27,6 +31,8 @@ class ArticleActivity : AppCompatActivity() {
 
         supportActionBar?.setTitle("Article")
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        shimmerView = binding.shimmerArticle
 
         showArticle()
 
@@ -42,6 +48,8 @@ class ArticleActivity : AppCompatActivity() {
                 call: Call<ArrayList<ArticleResponseItem>>,
                 response: Response<ArrayList<ArticleResponseItem>>
             ) {
+                shimmerView.stopShimmer()
+                shimmerView.visibility = View.GONE
                 response.body()?.let { list.addAll(it) }
                 val adapter = ArticleAdapter(list)
                 binding.rvArticle.adapter = adapter

@@ -37,7 +37,9 @@
     <string name="user">Pengguna</string>
     <string name="hello">Halo, </string>
     <string name="desc_hello">👋 Senang bertemu kembali denganmu!</string>
-    <string name="desc_hello2">Jaga Tanamanmu</string>
+    <string name="desc_hello2">Jaga Tanaman Kentangmu</string>
+    <string name="title_info_potato">Penting!</string>
+    <string name="desc_info_potato">Aplikasi ini masih dalam proses pengembangan,\nuntuk itu pemindaian hanya bisa memindai <b>tumbuhan kentang.</b></string>
 
     <!--Bottom Navigation -->
     <string name="home">Beranda</string>
@@ -55,7 +57,7 @@
     <string name="see_article">Lihat semua Artikel</string>
     <string name="camera">Ambil Gambar</string>
     <string name="take_picture">Ambil \nGambar</string>
-    <string name="diagnostic">Diagnostic \nProcess</string>
+    <string name="diagnostic">Diagnosa</string>
     <string name="see_result">See the \nResult</string>
 
     <!--Profile Fragment -->
@@ -75,7 +77,16 @@
 
     <!--Result Activity -->
     <string name="result">Hasil</string>
+    <string name="disease">Nama Penyakit</string>
+    <string name="desc_result">Klik penyakit untuk mengetahui lebih detail</string>
+    <string name="recomendation">Rekomendasi akan muncul disini. Obat atau Sejenisnya</string>
     <string name="predict">Prediksi</string>
+    <string name="title_recomendation">Rekomendasi Obat</string>
+    <string name="healthy">Daun ini sehat, tidak perlu diobati</string>
+    <string name="your_leaf">Daun ini </string>
+    <string name="info_result">Sebagai peringatan, diagnosa pada aplikasi ini hanya bersifat diagnosa awal. Anda bisa mengikuti saran yang ada diatas namun perlu diketahui jika penyakit sudah terlalu parah alangkah lebih baik jika konsultasi langsung kepada ahlinya.</string>
+    <string name="marks_early">Penyakit daun kentang bercak kering (early blight) mengalami gejala awal dengan adanya bercak kering pada daun bagian bawah, berwarna coklat berupa tanda khas lingkaran berpusat (seperti cincin) pada bercak tersebut, sporulasi tidak nampak seperti embun putih. Penyakit bercak kering (alternaria solani) adalah penyakit pada kentang yang disebabkan oleh jamur Alternaria Solani</string>
+    <string name="marks_late">Salah satu penyakit utama yang menyerang kentang adalah penyakit busuk daun atau biasa disebut hawar daun (late blight),` yang disebabkan patogen Phytopthora infestans (Mont.) de Bary; Ordo Pythiales; Family Pythiaceae. Kisaran inang dari patogen P. infestans menyerang tanaman tomat, kentang, paprika, terung, cabai dan famili solanaceae lainnya. Banyak tahapan siklus hidup P. infestans yang hanya dapat terlihat dibawah mikroskop. Benang halus (miselium) dapat mudah diamati dengan mikroskop, benang ini dicirikan dengan terdapatnya aliran plasma di dalam sel. Miselium berkembang diantara sel dan ujung sel benang hypa dan bersifat dikotomi. Miselia merambat pada permukaan media murni.</string>
 
     <!--Info Dialog Camera -->
     <string name="info">Cara Penggunaan</string>
@@ -100,6 +111,10 @@
     <string name="menu_cart">Keranjang</string>
     <string name="back">Kembali</string>
     <string name="shop">Belanja</string>
+    <string name="title_shop1">Obat Tanaman</string>
+    <string name="title_shop2">Solusi Sehat</string>
+    <string name="desc_shop1">Identifikasi obat yang dapat memberikan bantuan dan meningkatkan kesejahteraan tanaman!</string>
+    <string name="desc_shop2">Temukan solusi obat untuk melawan penyakit tanaman dan meningkatkan pertumbuhannya!</string>
     <string name="add_to_cart">Tambah ke Keranjang : Rp %d</string>
     <string name="total_order">Total order anda adalah Rp %d</string>
     <string name="lorem_ipsum">%s</string>

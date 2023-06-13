@@ -1,9 +1,14 @@
 package com.acer.iplant.ui
 
+import android.app.Dialog
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.fragment.app.Fragment
@@ -41,8 +46,14 @@ class DashboardActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val prefs: SharedPreferences = getSharedPreferences("prefs", MODE_PRIVATE)
+        val firstTime: Boolean = prefs.getBoolean("firstTime", true)
+
+        if (firstTime){ infoDialog() }
+
         bottomNavigation()
         darkMode()
+
         fragmentDisplay(dashboardFragment)
     }
 
@@ -60,6 +71,27 @@ class DashboardActivity : AppCompatActivity() {
     private fun fragmentDisplay(fragment: Fragment) = supportFragmentManager.beginTransaction().apply {
         replace(R.id.frame_dashboard, fragment)
         commit()
+    }
+
+    fun infoDialog(){
+        val dialog = layoutInflater.inflate(R.layout.info_potato, null)
+
+        val infoDialog = Dialog(this)
+        infoDialog.setContentView(dialog)
+
+        infoDialog.setCancelable(true)
+        infoDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        infoDialog.show()
+
+        val done = dialog.findViewById<Button>(R.id.button_close)
+        done.setOnClickListener {
+            infoDialog.dismiss()
+        }
+
+        val prefs: SharedPreferences = getSharedPreferences("prefs", MODE_PRIVATE)
+        val editor: SharedPreferences.Editor = prefs.edit()
+        editor.putBoolean("firstTime", false)
+        editor.apply()
     }
 
     private fun darkMode() {

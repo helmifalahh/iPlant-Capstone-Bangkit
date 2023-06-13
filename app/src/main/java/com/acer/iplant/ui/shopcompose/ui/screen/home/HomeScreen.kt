@@ -15,8 +15,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.acer.iplant.R
 import com.acer.iplant.di.Injection
 import com.acer.iplant.ui.shopcompose.model.Order
 import com.acer.iplant.ui.shopcompose.ui.ViewModelFactory
@@ -78,8 +80,8 @@ fun HomeScreen (
             }
 
             TitleSection(
-                title = "Our Favorites",
-                desc = "You've never met comfort like this!")
+                title = (stringResource(id = R.string.title_shop1)),
+                desc = (stringResource(id = R.string.desc_shop1)))
 
             viewModel.resultCare.collectAsState(initial = UiState.Loading).value.let { resultCare ->
                 when (resultCare) {
@@ -109,8 +111,8 @@ fun HomeScreen (
             }
 
             TitleSection(
-                title = "New Arrival",
-                desc = "Looking for an everyday shoes? Your hunt for the comfort pair is over")
+                title = (stringResource(id = R.string.title_shop2)),
+                desc = (stringResource(id = R.string.desc_shop2)))
 
             viewModel.result.collectAsState(initial = UiState.Loading).value.let { result ->
                 when (result) {

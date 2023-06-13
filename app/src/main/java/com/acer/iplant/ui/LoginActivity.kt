@@ -96,12 +96,6 @@ class LoginActivity : AppCompatActivity() {
         updateUI(currentUser)
     }
 
-
-    fun onClick(view: View) {
-        val intent = Intent(this, RegisterActivity::class.java)
-        startActivity(intent)
-    }
-
     fun loginGoogle(){
         // Configure Google Sign In
         val gso = GoogleSignInOptions

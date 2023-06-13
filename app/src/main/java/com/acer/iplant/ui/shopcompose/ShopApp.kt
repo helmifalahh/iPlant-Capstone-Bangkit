@@ -42,9 +42,7 @@ fun ShopApp(
 
     Scaffold(
         bottomBar = {
-            if (currentRoute != Screen.DetailShoes.route) {
-                BottomBar(navController)
-            }
+            BottomBar(navController)
         },
         modifier = modifier
     ) { innerPadding ->

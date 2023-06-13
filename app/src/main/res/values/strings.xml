@@ -36,7 +36,9 @@
     <string name="user">User</string>
     <string name="hello">Hello, </string>
     <string name="desc_hello">👋 Good to see you again!</string>
-    <string name="desc_hello2">Take care your garden</string>
+    <string name="desc_hello2">Take care your <b>potato plant</b></string>
+    <string name="title_info_potato">Important!</string>
+    <string name="desc_info_potato">This app is still under development,\nso it can only scan <b>potato plants.</b></string>
 
     <!--Bottom Navigation -->
     <string name="home">Home</string>
@@ -54,7 +56,7 @@
     <string name="see_article">See All Article</string>
     <string name="camera">Take Picture</string>
     <string name="take_picture">Take \nPicture</string>
-    <string name="diagnostic">Diagnostic \nProcess</string>
+    <string name="diagnostic">Diagnostic</string>
     <string name="see_result">See the \nResult</string>
 
     <!--Profile Fragment -->
@@ -74,7 +76,16 @@
 
     <!--Result Activity -->
     <string name="result">Result</string>
+    <string name="disease">Disease Name</string>
+    <string name="desc_result">Click this disease to get more detail</string>
+    <string name="recomendation">The recomendation will display here. Medicine or Something</string>
+    <string name="title_recomendation">Medicine Recomendations</string>
     <string name="predict">Predict</string>
+    <string name="healthy">This leaf is healthy, no need Medicine</string>
+    <string name="your_leaf">This leaf is </string>
+    <string name="info_result">As a reminder, the diagnosis in this application is only an initial diagnosis. You can follow the advice above but please note that if the disease is too severe it would be better to consult an expert directly.</string>
+    <string name="marks_early">Potato leaf disease dry spot (early blight) has initial symptoms with dry spots on the lower leaves, brown in color in the form of a typical circular mark centered (like a ring) on the spot, sporulation does not appear like white dew. Dry spot disease (alternaria solani) is a disease of potatoes caused by the fungus Alternaria Solani.</string>
+    <string name="marks_late">One of the major diseases affecting potatoes is late blight,` caused by the pathogen Phytopthora infestans (Mont.) de Bary; Order Pythiales; Family Pythiaceae. The host range of the pathogen P. infestans includes tomato, potato, bell pepper, eggplant, chili and other solanaceae families. Many stages of the P. infestans life cycle can only be seen under a microscope. Fine threads (mycelium) can be easily observed with a microscope, these threads are characterized by the presence of plasma flow in the cells. The mycelium develops between the cells and cell ends of the hypa thread and is dichotomous. Mycelia propagate on the surface of pure media.</string>
 
     <!--Info Dialog Camera -->
     <string name="info">How to Use</string>
@@ -98,6 +109,10 @@
     <string name="menu_home">Home</string>
     <string name="menu_cart">Cart</string>
     <string name="back">Back</string>
+    <string name="title_shop1">Plant Medicine</string>
+    <string name="title_shop2">Health Solution</string>
+    <string name="desc_shop1">Identify a medication that can provide relief and promote the plants well-being!</string>
+    <string name="desc_shop2">Find a medicinal solution to combat the plants illness and promote its growth!</string>
     <string name="shop">Shop</string>
     <string name="add_to_cart">Add to My Cart Now : Rp %d</string>
     <string name="total_order">Your order total is Rp %d</string>
